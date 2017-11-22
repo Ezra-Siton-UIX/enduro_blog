@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>blog list</title>
+		<link rel="stylesheet" href="/assets/css/main.css">
+		<style type="text/css"></style>
+	</head>
+	<body>
+		{{#blog}}
+		{{#each this}}
+        <article>
+            <h2>{{blog_entry.blog_title}}</h2>
+            <p>{{{blog_entry.blog_text}}}</p>
+            <a href="/blog/{{page_slug}}">Read more...</a>
+		</article>
+		{{/each}}
+		{{/blog}}
+		{{>end}}
+	</body>
+	
+	{{!-- <script data-main="/assets/js/main.js" src="/assets/vendor/requirejs/require.js"></script> --}}
+</html>
